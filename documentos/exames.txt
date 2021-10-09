@@ -1,0 +1,12 @@
+EXAMES:
+======================================
+
+Exames possíveis:
+
+LABORATORIAIS - /laboratorial
+PREVENTIVOS -   /preventivo
+TESTE RÁPIDO  - /testerapido
+DEMAIS EXAMES - /sisreg
+
+
+======================================

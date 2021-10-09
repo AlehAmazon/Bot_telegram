@@ -1,0 +1,25 @@
+               AVISOS:
+========================================
+
+	ABERTURA DE PRONTUÁRIO:
+
+ Para abertura do prontuário na unidade é
+ necessario a apresentação do RG.
+ Em caso de criança a certidão de nascimento.
+
+ - Cartão de vacina não é valido -
+
+	MARCAÇÃO DE EXAME:
+
+ Para marcação de exame é obrigatorio o
+ Cartão do SUS (/cartaosus).
+ Veja os comandos /sisreg.
+                  /exames
+
+
+	INICIO DE PRÉ-NATAL:
+
+ O inicio de Pré-Natal é realizado pela a
+ Enfermeira. Agendamento na recepção.
+
+========================================

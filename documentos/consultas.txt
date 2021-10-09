@@ -1,0 +1,23 @@
+                    CONSULTAS:
+========================================
+	Ficha por ordem de chegada.
+
+MANHÃ - Horário 6h :
+
+CLINICO GERAL  - SEG À SEXTA.
+PEDIATRA       - SEG À SEXTA.
+GINECOLOGISTA  - TER E QUINTA.
+ENFERMEIRA     - (LICENÇA MEDICA).
+SERV. SOCIAL   - SEG À SEXTA
+
+TARDE - Horário 12h:
+
+CLINICO GERAL  - SEG, QUI E SEXTA.
+GINECOLOGISTA  - TERÇA.
+ENFERMEIRA     - SEG À SEXTA.
+SERV. SOCIAL   - SEG À SEXTA
+
+* CONSULTA DE PRÉ-NATAL É AGENDADADA.
+* INICIO DE PRÉ-NATAL É COM A ENFERMEIRA.
+
+========================================

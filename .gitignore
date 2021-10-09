@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#Bot11
+
+requirements.txt
+/Logs
+bot_id.txt
+setup_pyinstaller.bat
