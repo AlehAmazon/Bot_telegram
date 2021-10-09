@@ -9,7 +9,6 @@ SISTEMA DE REGULAÇÃO - SISREG
 
 - É obrigatório apresentação de Cartão do SUS -
 
-  Encaminhamento para Nutricionista não marca
-  pelo SISREG.
+  Encaminhamento para Nutricionista não marca pelo SISREG.
 
 ========================================

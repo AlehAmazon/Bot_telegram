@@ -135,3 +135,4 @@ requirements.txt
 /Logs
 bot_id.txt
 setup_pyinstaller.bat
+config.ini

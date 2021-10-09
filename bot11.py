@@ -1,10 +1,21 @@
+__author__="AlehAmazon"
+
 import telebot
+import configparser
+
+from telebot.types import Message
 
 
-CHAVE_API="162282715:AAF3qxDBCLv2qh68d1Xi1QjVAvWe4sciK3E"
+# Configuring bot
+config = configparser.ConfigParser()
+config.read_file(open('config.ini'))
+
+CHAVE_API=(config['DEFAULT']['token'])
 bot=telebot.TeleBot(CHAVE_API)
 
-
+print(__author__)
+print(CHAVE_API)
+print ("...")
 '''
 =============================================================================
 Funciona respondendo ao comandos digitados
@@ -17,13 +28,24 @@ bot
 
 #Functions:
 
-def verificar(menagem):
-    return True
-
 # Handles all text messages that contains the commands '/start' or '/help'.
-@bot.message_handler(commands=['start', 'help'])
+@bot.message_handler(commands=['help'])
 def handle_start_help(message):
 	bot.send_message(message.chat.id, "Bot criado para passar informações utéis sobre o atendimento. Escolha entre os comandos validos digitando '/' . Ainda em fase de testes.")
+    
+@bot.message_handler(commands=['start'])
+def handle_start_help(mensagem):
+    # Handles
+    texto = '''
+    Escolha uma opção para continuar (Clique no item):
+    /avisos Avisos e orientações
+    /consultas Horários
+    /cartaosus Cartão Nacional de Saúde
+    /exames Informação sobre exames
+    /sisreg Sistema de Regulação
+    /telefone Telefones utéis
+    Responder qualquer outra coisa não irá funcionar, clique em uma das opções    '''
+    bot.reply_to(mensagem, texto)
     
 
 # Handles all sent documents and audio files
@@ -47,7 +69,7 @@ def consultas(mensagem):
 
 @bot.message_handler(commands=["cartaosus"])
 def cartaosus(mensagem):
-    arquivo = open("documentos/cartaosus.txt",'r')
+    arquivo = open("documentos/cns.txt",'r')
     conteudo = arquivo.read()
     bot.send_message(mensagem.chat.id,conteudo)
     arquivo.close()
@@ -73,13 +95,33 @@ def telefone(mensagem):
     bot.send_message(mensagem.chat.id,conteudo)
     arquivo.close()
 
-@bot.message_handler(commands=["opcao1"])
-def opcao1(mensagem):
-    pass
+@bot.message_handler(commands=["bolsafamilia"])
+def bolsafamilia(mensagem):
+    arquivo = open("documentos/bolsafamilia.txt",'r')
+    conteudo = arquivo.read()
+    bot.send_message(mensagem.chat.id,conteudo)
+    arquivo.close()    
 
-@bot.message_handler(commands=["opcao2"])
-def opcao2(mensagem):
-    pass
+@bot.message_handler(commands=["laboratorial"])
+def laboratorial(mensagem):
+    arquivo = open("documentos/laboratorial.txt",'r')
+    conteudo = arquivo.read()
+    bot.send_message(mensagem.chat.id,conteudo)
+    arquivo.close()
+
+@bot.message_handler(commands=["testerapido"])
+def testerapido(mensagem):
+    arquivo = open("documentos/testerapido.txt",'r')
+    conteudo = arquivo.read()
+    bot.send_message(mensagem.chat.id,conteudo)
+    arquivo.close()
+
+@bot.message_handler(commands=["preventivo"])
+def preventivo(mensagem):
+    arquivo = open("documentos/preventivo.txt",'r')
+    conteudo = arquivo.read()
+    bot.send_message(mensagem.chat.id,conteudo)
+    arquivo.close()
 
 @bot.message_handler(commands=["opcao3"])
 def opcao3(mensagem):
@@ -97,14 +139,19 @@ def linha ():
     print ("Getting updates".center(50, '-'))
     print ("")
 
+def verificar(menagem):
+    return True
 
 @bot.message_handler(func=verificar)
 def responder(mensagem):
     texto = '''
     Escolha uma opção para continuar (Clique no item):
-    /opcao1 Fazer um pedido
-    /opcao2 Reclamar de um pedido
-    /opcao3 Mandar um abraço
+    /avisos Avisos e orientações
+    /consultas Horários
+    /cartaosus Cartão Nacional de Saúde
+    /exames Informação sobre exames
+    /sisreg Sistema de Regulação
+    /telefone Telefones utéis
     Responder qualquer outra coisa não irá funcionar, clique em uma das opções    '''
     bot.reply_to(mensagem, texto)
 
@@ -115,7 +162,7 @@ def main ():
 
     # Start the Bot
     bot.polling ()
-    bot.idle()
+    #bot.idle()
 
 
 
