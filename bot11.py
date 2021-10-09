@@ -46,7 +46,7 @@ def handle_start_help(mensagem):
     
 
 # Handles all sent documents and audio files
-@bot.message_handler(content_types=['document', 'audio'])
+@bot.message_handler(content_types=['document', 'audio', 'video','location','contact', 'voice', 'photo'] )
 def handle_docs_audio(message):
 	bot.send_message(message.chat.id, "Desculpe, Eu não conheço este comando.")
 
@@ -159,7 +159,7 @@ def main ():
 
     # Start the Bot
     bot.polling ()
-    #bot.idle()
+   
 
 
 
@@ -167,12 +167,11 @@ def main ():
 print ("Getting updates".center(50, '-'))
 print ("")
 print ("Iniciando o BotUBSDrLM...")
-print ("Versão 1.0.11.1")
+print ("Versão 1.0.11.2")
 
 
 '''
 ======================================================================
-INICO DO PROGRAMA
 ======================================================================
 '''
 
