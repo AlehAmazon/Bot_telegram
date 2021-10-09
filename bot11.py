@@ -2,7 +2,6 @@ __author__="AlehAmazon"
 
 import telebot
 import configparser
-
 from telebot.types import Message
 
 
@@ -13,9 +12,7 @@ config.read_file(open('config.ini'))
 CHAVE_API=(config['DEFAULT']['token'])
 bot=telebot.TeleBot(CHAVE_API)
 
-print(__author__)
-print(CHAVE_API)
-print ("...")
+
 '''
 =============================================================================
 Funciona respondendo ao comandos digitados
