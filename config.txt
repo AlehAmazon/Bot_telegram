@@ -1,0 +1,6 @@
+[DEFAULT]
+
+token= 
+
+salve aqui o seu token/save here or your token
+Mude a extensão para .ini/Change the extension to .ini

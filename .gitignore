@@ -134,5 +134,7 @@ dmypy.json
 requirements.txt
 /Logs
 bot_id.txt
-setup_pyinstaller.bat
+setup.py
 config.ini
+/imagem
+*.pdf
