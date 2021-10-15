@@ -12,7 +12,6 @@ config.read_file(open('config.ini'))
 CHAVE_API=(config['DEFAULT']['token'])
 bot=telebot.TeleBot(CHAVE_API)
 
-
 '''
 =============================================================================
 Funciona respondendo ao comandos digitados
@@ -22,6 +21,7 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot
 =============================================================================
 '''
+
 
 #Functions:
 
@@ -136,6 +136,10 @@ def linha ():
     print ("Getting updates".center(50, '-'))
     print ("")
 
+def stop():
+    bot.idle()
+    bot.stop_bot(0)   
+
 def verificar(menagem):
     return True
 
@@ -156,24 +160,21 @@ def responder(mensagem):
 #----------------------------MAIN------------------------------------
 def main ():	
     linha()
+    
+    #import tela
 
     # Start the Bot
     bot.polling ()
-   
-
-
-
 
 print ("Getting updates".center(50, '-'))
 print ("")
 print ("Iniciando o BotUBSDrLM...")
-print ("Versão 1.0.11.2")
+print ("Versão 1.0.11.3")
 
 
 '''
 ======================================================================
 ======================================================================
 '''
-
 if __name__ == '__main__':
     main()
