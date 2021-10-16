@@ -161,7 +161,7 @@ def responder(mensagem):
 def main ():	
     linha()
     
-    #import tela
+    
 
     # Start the Bot
     bot.polling ()
