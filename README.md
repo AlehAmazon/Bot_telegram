@@ -1,3 +1,3 @@
-# Bot_telegram-11
-Aprender a criar um Bot para o telegram de uma forma diferente do Bot10
-Arquivo já está estavel e funcional.
+# Bot_telegram
+Aprender a criar um Bot para o telegram que acesse arquivos de texto que podem ser modificados.
+
