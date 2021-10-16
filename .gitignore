@@ -138,3 +138,10 @@ setup.py
 config.ini
 /imagem
 *.pdf
+commit.txt
+/Scripts
+*.cfg
+start.py
+tela.py
+stop.py
+environment.yml
